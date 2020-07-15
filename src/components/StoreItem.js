@@ -10,8 +10,8 @@ export default class StoreItem extends Component {
 
     return (
       <div className="col-md-3 col-sm-6 mb-5">
-        <div className="product-grid2">
-          <div className="product-image2">
+        <div className="product-grid2 h-100 d-flex flex-column justify-content-between">
+          <div className="product-image2 text-center">
             <Link to={"/store/" + id}>
               <img className="img-fluid pic-1" src={image} alt="" />
             </Link>

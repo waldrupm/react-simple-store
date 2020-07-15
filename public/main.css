@@ -261,3 +261,6 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+.pic-1 {
+  max-height: 175px;
+}
