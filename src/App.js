@@ -17,11 +17,7 @@ export default class App extends Component {
           <main className="container">
             <Switch>
               <Route exact path="/" render={() => <Home />} />
-              <Route
-                exact
-                path="/store"
-                render={({ match }) => <Store match={match} />}
-              />
+              <Route exact path="/store" render={() => <Store />} />
               <Route
                 exact
                 path="/store/:id"

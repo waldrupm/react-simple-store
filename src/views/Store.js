@@ -14,7 +14,6 @@ export default class Store extends Component {
       .then((res) => res.json())
       .then((json) => {
         this.setState({ products: json });
-        console.log("this.props.match", this.props.match);
       });
   }
 
