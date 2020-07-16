@@ -63,7 +63,7 @@ export default class App extends Component {
             <Navbar numItemsInCart={numItemsInCart} />
           </header>
           ​
-          <main className="container">
+          <main className="container pt-5">
             <Switch>
               <Route exact path="/" render={() => <Home />} />
               <Route
