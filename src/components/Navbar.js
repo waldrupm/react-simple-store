@@ -39,15 +39,17 @@ export default class Navbar extends Component {
                 <span>
                   <i className="fa fa-shopping-cart"></i>
                 </span>{" "}
-                <span className="badge badge-dark">1</span>
+                <span className="badge badge-dark">
+                  {this.props.numItemsInCart}
+                </span>
               </a>
               <div className="dropdown-menu" aria-labelledby="dropdownId">
                 <Link className="dropdown-item" to="/store">
                   Products
                 </Link>
-                <a className="dropdown-item" href="/">
+                <Link className="dropdown-item" to="/cart">
                   Checkout
-                </a>
+                </Link>
               </div>
             </li>
           </ul>

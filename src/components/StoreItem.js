@@ -20,12 +20,12 @@ export default class StoreItem extends Component {
             <h5 className="title">
               <Link to={"/store/" + id}>{title}</Link>
             </h5>
-            <a
-              className="add-to-cart mt-3 mb-2 d-block btn btn-success"
-              href="/"
+            <button
+              className="add-to-cart mt-3 mb-2 w-100 btn btn-success"
+              onClick={() => this.props.addToOrder(id)}
             >
               Add to cart
-            </a>
+            </button>
             <span className="price">${price}</span>
           </div>
         </div>

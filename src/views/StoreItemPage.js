@@ -46,20 +46,12 @@ export default class StoreItemPage extends Component {
               </div>
               <p>{this.state.product.description}</p>
               <div className="product-count">
-                <label htmlFor="size">Quantity</label>
-                <form action="#" className="display-flex">
-                  <div className="qtyminus">-</div>
-                  <input
-                    type="text"
-                    name="quantity"
-                    defaultValue="1"
-                    className="qty"
-                  />
-                  <div className="qtyplus">+</div>
-                </form>
-                <a href="/" className="round-black-btn">
+                <button
+                  onClick={() => this.props.addToOrder(this.state.id)}
+                  className="round-black-btn"
+                >
                   Add to Cart
-                </a>
+                </button>
               </div>
             </div>
           </div>
