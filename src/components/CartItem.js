@@ -18,7 +18,10 @@ export default class CartItem extends Component {
             <div className="ml-3 d-inline-block align-middle">
               <h5 className="mb-0">
                 {" "}
-                <a href="#" className="text-dark d-inline-block align-middle">
+                <a
+                  href="/store"
+                  className="text-dark d-inline-block align-middle"
+                >
                   {title}
                 </a>
               </h5>

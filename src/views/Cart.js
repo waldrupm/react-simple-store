@@ -126,7 +126,10 @@ export default class Cart extends Component {
                   <h5 className="font-weight-bold">${total.toFixed(2)}</h5>
                 </li>
               </ul>
-              <a href="#" className="btn btn-dark rounded-pill py-2 btn-block">
+              <a
+                href="/cart"
+                className="btn btn-dark rounded-pill py-2 btn-block"
+              >
                 Procceed to checkout
               </a>
             </div>
