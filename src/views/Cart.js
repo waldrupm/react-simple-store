@@ -63,8 +63,7 @@ export default class Cart extends Component {
             </div>
             <div className="p-4">
               <p className="font-italic mb-4">
-                If you have a coupon code, please tear it up because we hate
-                them.
+                If you have a coupon code, please lose it because we hate them.
               </p>
               <div className="input-group mb-4 border rounded-pill p-2">
                 <input
