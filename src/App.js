@@ -47,6 +47,10 @@ export default class App extends Component {
     return this.state.products.filter((product) => product.id === key)[0];
   };
 
+  getNumOfProductInOrder = (key) => {
+    return this.state.order[key];
+  };
+
   render() {
     const orderItems = Object.keys(this.state.order);
     const numItemsInCart = orderItems.reduce((prevTotal, key) => {
@@ -80,6 +84,7 @@ export default class App extends Component {
                     removeFromOrder={this.removeFromOrder}
                     orderProducts={this.getOrderProducts()}
                     order={this.state.order}
+                    getNumOfProductInOrder={this.getNumOfProductInOrder}
                   />
                 )}
               />
