@@ -22,7 +22,7 @@ export default class CartItem extends Component {
                   href="/store"
                   className="text-dark d-inline-block align-middle"
                 >
-                  {title}
+                  {title.substr(0, 50) + "..."}
                 </a>
               </h5>
               <span className="text-muted font-weight-normal font-italic d-block">
@@ -35,16 +35,32 @@ export default class CartItem extends Component {
           <strong>${price.toFixed(2)}</strong>
         </td>
         <td className="border-0 align-middle">
+          <button
+            id="minusOne"
+            className="btn btn-primary btn-sm mr-2"
+            onClick={() => this.props.removeOneFromOrder(id)}
+          >
+            <i className="fa fa-minus"></i>
+          </button>
           <strong>{numInCart}</strong>
+          <button
+            className="btn btn-primary btn-sm ml-2"
+            id="plusOne"
+            onClick={() => this.props.addToOrder(id)}
+          >
+            <i className="fa fa-plus"></i>
+          </button>
         </td>
         <td className="border-0 align-middle">
           <strong>${itemTotal}</strong>
         </td>
         <td className="border-0 align-middle">
-          <i
-            className="fa fa-trash"
+          <button
+            className="btn btn-warning btn-sm"
             onClick={() => this.props.removeFromOrder(id)}
-          ></i>
+          >
+            <i className="fa fa-trash"></i>
+          </button>
         </td>
       </tr>
     );

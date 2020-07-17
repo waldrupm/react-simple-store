@@ -29,6 +29,16 @@ export default class App extends Component {
     this.setState({ order });
   };
 
+  removeOneFromOrder = (key) => {
+    const order = { ...this.state.order };
+    if (order[key] <= 1) {
+      this.removeFromOrder(key);
+    } else {
+      order[key] -= 1;
+      this.setState({ order });
+    }
+  };
+
   removeFromOrder = (key) => {
     const order = { ...this.state.order };
     delete order[key];
@@ -85,6 +95,8 @@ export default class App extends Component {
                     orderProducts={this.getOrderProducts()}
                     order={this.state.order}
                     getNumOfProductInOrder={this.getNumOfProductInOrder}
+                    removeOneFromOrder={this.removeOneFromOrder}
+                    addToOrder={this.addToOrder}
                   />
                 )}
               />

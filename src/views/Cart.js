@@ -4,6 +4,8 @@ import CartItem from "../components/CartItem";
 export default class Cart extends Component {
   render() {
     const removeFromOrder = this.props.removeFromOrder;
+    const removeOneFromOrder = this.props.removeOneFromOrder;
+    const addToOrder = this.props.addToOrder;
     const orderProducts = this.props.orderProducts;
     const shipping = 25;
     let subtotal = this.props.orderProducts.reduce((prevTotal, product) => {
@@ -46,6 +48,8 @@ export default class Cart extends Component {
                       <CartItem
                         product={product}
                         removeFromOrder={removeFromOrder}
+                        removeOneFromOrder={removeOneFromOrder}
+                        addToOrder={addToOrder}
                         numInCart={numInCart}
                       />
                     );
